@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+main {
+    width: 90%; /* Ajuste para largura flexível */
+    max-width: 1356px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 8%;
+    gap: 64px;
+}
+
+h1 {
+    font-size: 2rem; /* Tamanho flexível */
+}
+
+.linha{
+    width: 2px;
+    background-color: #b6b6b6;
+    height: 1.5rem;
+
+}
+
+.date{
+    border: 1px solid #b6b6b6;
+    color: #b6b6b6;
+    padding: 4px 12px 4px 12px;
+    gap: 10px;
+    max-width: 100%;
+    height: 26px;
+    border-radius: 4px;
+}
+
+.name{
+    border: 1px solid #b6b6b6;
+    color: #b6b6b6;
+    padding: 4px 12px 4px 12px;
+    gap: 10px;
+    max-width: 100%;
+    height: 26px;
+    border-radius: 4px;
+}
+
+.contents {
+    width: 100%; /* Ajuste para largura flexível */
+    min-height: 686px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.containerTask {
+    width: 100%; /* Ajuste para largura flexível */
+    max-width: 1018px;
+    max-height: 106px;
+    border-radius: 16px;
+    border: 1px solid black;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.informationTask {
+    display: flex;
+    gap: 10px;
+}
+
+.nameDescriptionTask {
+    display: flex;
+    gap: 10px;
+}
+
+.levelAlta {
+    background: red;
+    color: white;
+    padding: 4px 12px 4px 12px;
+    gap: 10px;
+    width: 58px;
+    height: 26px;
+    border-radius: 4px;
+}
+
+.levelMedia {
+    background: orange;
+    color: white;
+    padding: 4px 12px 4px 12px;
+    gap: 10px;
+    width: 58px;
+    height: 26px;
+    border-radius: 4px;
+}
+
+.levelBaixa {
+    background: green;
+    color: white;
+    padding: 4px 12px 4px 12px;
+    width: 58px;
+    height: 26px;
+    border-radius: 4px;
+}
+
+.title h2 {
+    font-size: 1.2rem; /* Tamanho flexível */
+}
+
+.description p {
+    font-size: 1rem; /* Tamanho flexível */
+}
+.description{
+    align-items: center;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .containerTask {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column; /* Alinha os itens verticalmente */
+    }
+
+    .nameDescriptionTask {
+        width: 100%;
+    }
+
+    .informationTask {
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Tamanho menor para telas pequenas */
+    }
+
+    .title h2 {
+        font-size: 1rem;
+    }
+
+    .description p {
+        font-size: 0.9rem;
+    }
+}
