@@ -46,7 +46,7 @@ h1 {
     align-items: center;
 }
 
-.priority, .date, .name {
+.priorityLevelAlta, .priorityLevelMedia, .priorityLevelBaixa, .date, .name {
     padding: 4px 8px;
     border-radius: 4px;
     display: flex;
@@ -55,21 +55,14 @@ h1 {
     font-size: 12px;
 }
 
-.priority {
+.priorityLevelAlta, .priorityLevelMedia, .priorityLevelBaixa {
     color: white;
     font-weight: 600;
 }
 
-.levelAlta {
-    background: red;
-}
-
-.levelMedia {
-    background: orange;
-}
-
-.levelBaixa {
-    background: green;
+.priority {
+    color: white;
+    font-weight: 600;
 }
 
 .date, .name {
