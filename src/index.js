@@ -51,6 +51,43 @@ function sortTasksByPriority() {
 
     // Função que atribui um valor para cada prioridade (1, 2 ou 3)
     const getPriorityValue = (taskElement) => {
-        const priorityText = document.querySelector()
+        const priorityText = taskElement.querySelector(".priorityLevelAlta, .priorityLevelMedia, .priorityLevelBaixa")
+        const priorityElement = priorityText.textContent.trim()
+
+        if(priorityElement === "Alta") return 1
+        if(priorityElement === "Média") return 2
+        return 3
     }
+
+    //Ordenar do acordo com o nível de prioridade (Alta, Media, Baixa)
+    const taskArray = Array.from(tasks)
+    taskArray.sort((a,b) => {getPriorityValue(a) - getPriorityValue(b)})
+    // Consequentemente pego os indices (1,2,3) e reordeno do menor para o maior 
+    taskArray.forEach(task => taskList.appendChild(task))
+    
 }
+
+// Evento de envio do formulário (quando o usuário adicionar uma nova tarefa)
+formTarefa.addEventListener("submit", (e) => {
+    e.preventDefault(); // Previne o envio do formulário
+
+    // Pega os valores do formulário
+    const titulo = document.getElementById("tituloTarefa").value;
+    const descricao = document.getElementById("descricaoTarefa").value;
+    const prioridade = document.getElementById("prioridadeTarefa").value;
+
+    // Cria o novo elemento da tarefa
+    const newTask = createTaskElement(titulo, descricao, prioridade);
+
+    // Adiciona a nova tarefa na lista
+    taskList.appendChild(newTask);
+
+    // Aplica a cor da prioridade à nova tarefa
+    setPriorityColor(newTask);
+
+    // Ordena a lista de tarefas com base na prioridade
+    sortTasksByPriority();
+
+    // Limpa os campos do formulário
+    formTarefa.reset();
+});
