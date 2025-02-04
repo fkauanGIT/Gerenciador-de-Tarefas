@@ -46,13 +46,25 @@ h1 {
     align-items: center;
 }
 
-.priorityLevelAlta, .priorityLevelMedia, .priorityLevelBaixa, .date, .name {
+.priorityLevelAlta {
+    padding: 4px 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+.priorityLevelMedia, .priorityLevelBaixa, .date, .name {
     padding: 4px 8px;
     border-radius: 4px;
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 12px;
+}
+
+.names{
+    display: flex;
+    gap: 10px;
 }
 
 .priorityLevelAlta, .priorityLevelMedia, .priorityLevelBaixa {
