@@ -66,7 +66,7 @@ function arrangeAccordingToOrder() {
     });
 
     // Agora que as tarefas estão ordenadas, reposiciona no DOM
-    taskArray.forEach(task => taskList.appendChild(task)); // Reorganiza a lista de tarefas no DOM
+    taskArray.forEach(task => taskList.appendChild(task)); // Reorganiza a lista de tarefas 
 }
 
 
@@ -74,7 +74,7 @@ function arrangeAccordingToOrder() {
 
 
 
-// ser forms !!!!!
+// sem forms !!!!!
 
 // Chame a função para organizar as tarefas quando necessário
 document.addEventListener("DOMContentLoaded", function() {
@@ -83,4 +83,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Para cada tarefa existente, altera a cor de fundo com base na prioridade
 tasks.forEach(task => setPriorityColor(task));
+
 
