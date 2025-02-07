@@ -5,132 +5,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Tarefas</title>
-    
+
     <!-- Fonte Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/styles.css"> <!-- Estilos -->
-    <link rel="stylesheet" href="css/reset.css"> <!--Reset css-->
+
+    <link rel="stylesheet" href="css/styles.css"> <!-- Estilos Compilados do SASS-->
 </head>
 
 <body>
     <main>
         <form action="#">
+            <div class="container_form_1">
+                <div class="title_form">
+                    <label for="title_form">Título</label>
+                    <input type="text" id="title_form" name="title_form" placeholder="Ex: revisar código crítico">
+                </div>
+                <div class="contentContainer1">
+                    <div class="priority">
+                        <label for="priority">Prioridade</label>
+                        <select name="priority" id="priority">
+                            <option value="Alta">Alta</option>
+                            <option value="Media">Média</option>
+                            <option value="Baixa">Baixa</option>
+                        </select>
+                    </div>
 
-            <div class="formDiv">
-                <div id="titulo">
-                    <label for="">Título</label>
-                    <input type="text">
-                </div>
-            
-                <div class="content">
-                    <label for="">Prioridade</label>
-                    <select name="Priority" id="priority" aria-placeholder="Alta">
-                        <option value="Alta">Alta</option>
-                        <option value="Média">Média</option>
-                        <option value="Baixa">Baixa</option>
-                    </select>
-            
-                    <label for="">Data</label>
-                    <input type="date">
+                    <div class="date__form">
+                        <label for="date">Data</label>
+                        <input type="datetime" id="date" name="date" placeholder="12/12/2012">
+                    </div>
                 </div>
             </div>
-    
-            <div class="content">
-                <label for="">Descrição</label>
-                <input type="text">
-                <label for="">Reponsáveis</label>
-                <div>
-                    <input type="checkbox"> Alice
-                    <input type="checkbox"> Carlos
-                    <input type="checkbox"> Fabiano
-                    <input type="checkbox"> Fernanda
-                    <input type="checkbox"> Luíza
-                    <input type="checkbox"> Marcos
-                </div>     
+
+            <div class="container_form_2">
+                <div class="description">
+                    <label for="description">Descrição</label>
+                    <input type="text" id="description" name="description"
+                        placeholder="Revisar bugs críticos no módulo principal. ">
+                </div>
+                <div class="responsabilitys">
+                    <label for="responsabilitys">Responsáveis</label>
+                    <div class="responsabilitysCheckbox">
+                        <div>
+                            <input type="checkbox" id="alice" name="responsability" value="Alice">
+                            <label for="alice">Alice</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="carlos" name="responsability" value="Carlos">
+                            <label for="carlos">Carlos</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="fabiano" name="responsability" value="Fabiano">
+                            <label for="fabiano">Fabiano</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="luisa" name="responsability" value="Luísa">
+                            <label for="luisa">Luísa</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="fabiana" name="responsability" value="Fabiana">
+                            <label for="fabiana">Fabiana</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="marcos" name="responsability" value="Marcos">
+                            <label for="marcos">Marcos</label>
+                        </div>
+                    </div>
+                </div>
             </div>
-    
-            <div>
-                <button>Limpar</button>
-                <button>Adicionar</button>
+
+            <div class="container_form_3">
+                <button type="reset" class="button__clear">Limpar</button>
+                <button type="submit" class="button__add">Adicionar</button>
             </div>
         </form>
-
 
 
         <h1>Tarefas</h1>
         <ul class="contents">
             <li class="containerTask">
-                <div class="informationTask">
-                    <div class="priority">Alta</div>
-                    <div class="date">12/12/2012</div>
-                    <div class="names">
+                <div class="div_containerTask">
+                    <div class="informationTask">
+                        <div class="priority">Alta</div>
+                        <div class="date">12/12/2012</div>
+
                         <div class="name">Luísa</div>
                         <div class="name">Fabiano</div>
                     </div>
-                </div>
-                <div class="nameDescriptionTask">
-                    <h2 class="title">Revisar código crítico</h2>
-                    <p class="description">Revisar bugs críticos no módulo principal.</p>
+                    <div class="nameDescriptionTask">
+                        <h2 class="title">Revisar código crítico</h2>
+                        <p class="description">Revisar bugs críticos no módulo principal.</p>
+                    </div>
                 </div>
             </li>
 
             <li class="containerTask">
-                <div class="informationTask">
-                    <div class="priority">Média</div>
-                    <div class="date">12/12/2012</div>
-                    <div class="names">
+                <div class="div_containerTask">
+                    <div class="informationTask">
+                        <div class="priority">Média</div>
+                        <div class="date">12/12/2012</div>
                         <div class="name">Alíce</div>
                         <div class="name">Carlos</div>
                     </div>
-                </div>
-                <div class="nameDescriptionTask">
-                    <h2 class="title">Implementar autenticação</h2>
-                    <p class="description">Adicionar sistema de login seguro.</p>
-                </div>
-            </li>
-
-            <li class="containerTask">
-                <div class="informationTask">
-                    <div class="priority">Média</div>
-                    <div class="date">19/12/2012</div>
-                    <div class="names">
-                        <div class="name">Fernanda</div>
+                    <div class="nameDescriptionTask">
+                        <h2 class="title">Implementar autenticação</h2>
+                        <p class="description">Adicionar sistema de login seguro.</p>
                     </div>
                 </div>
-                <div class="nameDescriptionTask">
-                    <h2 class="title">Atualizar documentação</h2>
-                    <p class="description">Documentar novas funcionalidades e APIs.</p>
+            </li>
+
+            <li class="containerTask">
+                <div class="div_containerTask">
+                    <div class="informationTask">
+                        <div class="priority">Média</div>
+                        <div class="date">19/12/2012</div>
+
+                        <div class="name">Fernanda</div>
+
+                    </div>
+                    <div class="nameDescriptionTask">
+                        <h2 class="title">Atualizar documentação</h2>
+                        <p class="description">Documentar novas funcionalidades e APIs.</p>
+                    </div>
                 </div>
             </li>
 
             <li class="containerTask">
-                <div class="informationTask">
-                    <div class="priority">Baixa</div>
-                    <div class="date">12/12/2012</div>
-                    <div class="names">
+                <div class="div_containerTask">
+                    <div class="informationTask">
+                        <div class="priority">Baixa</div>
+                        <div class="date">12/12/2012</div>
+
                         <div class="name">Luísa</div>
+
                     </div>
-                </div>
-                <div class="nameDescriptionTask">
-                    <h2 class="title">Otimizar consultas SQL</h2>
-                    <p class="description">Melhorar estrutura e legibilidade do código antigo.</p>
+                    <div class="nameDescriptionTask">
+                        <h2 class="title">Otimizar consultas SQL</h2>
+                        <p class="description">Melhorar estrutura e legibilidade do código antigo.</p>
+                    </div>
                 </div>
             </li>
 
             <li class="containerTask">
-                <div class="informationTask">
-                    <div class="priority">Baixa</div>
-                    <div class="date">10/12/2012</div>
-                    <div class="names">
+                <div class="div_containerTask">
+                    <div class="informationTask">
+                        <div class="priority">Baixa</div>
+                        <div class="date">10/12/2012</div>
+
                         <div class="name">Fernanda</div>
+
                     </div>
-                </div>
-                <div class="nameDescriptionTask">
-                    <h2 class="title">Revisar design responsivo</h2>
-                    <p class="description">Garantir que o site funciona em todos os dispositivos.</p>
+                    <div class="nameDescriptionTask">
+                        <h2 class="title">Revisar design responsivo</h2>
+                        <p class="description">Garantir que o site funciona em todos os dispositivos.</p>
+                    </div>
                 </div>
             </li>
         </ul>

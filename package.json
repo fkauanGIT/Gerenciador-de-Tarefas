@@ -1,0 +1,21 @@
+{
+  "name": "gerenciador-de-tarefas",
+  "version": "1.0.0",
+  "description": "![Visualição do projeto](assets/Captura%20de%20tela%202025-02-01%20152323.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass/app.scss:css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fkauanGIT/Gerenciador-de-Tarefas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fkauanGIT/Gerenciador-de-Tarefas/issues"
+  },
+  "homepage": "https://github.com/fkauanGIT/Gerenciador-de-Tarefas#readme"
+}
