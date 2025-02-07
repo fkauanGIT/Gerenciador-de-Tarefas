@@ -17,11 +17,54 @@
 
 <body>
     <main>
+        <form action="#">
+
+            <div class="formDiv">
+                <div id="titulo">
+                    <label for="">Título</label>
+                    <input type="text">
+                </div>
+            
+                <div class="content">
+                    <label for="">Prioridade</label>
+                    <select name="Priority" id="priority" aria-placeholder="Alta">
+                        <option value="Alta">Alta</option>
+                        <option value="Média">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+            
+                    <label for="">Data</label>
+                    <input type="date">
+                </div>
+            </div>
+    
+            <div class="content">
+                <label for="">Descrição</label>
+                <input type="text">
+                <label for="">Reponsáveis</label>
+                <div>
+                    <input type="checkbox"> Alice
+                    <input type="checkbox"> Carlos
+                    <input type="checkbox"> Fabiano
+                    <input type="checkbox"> Fernanda
+                    <input type="checkbox"> Luíza
+                    <input type="checkbox"> Marcos
+                </div>     
+            </div>
+    
+            <div>
+                <button>Limpar</button>
+                <button>Adicionar</button>
+            </div>
+        </form>
+
+
+
         <h1>Tarefas</h1>
         <ul class="contents">
             <li class="containerTask">
                 <div class="informationTask">
-                    <div class="priorityLevelAlta">Alta</div>
+                    <div class="priority">Alta</div>
                     <div class="date">12/12/2012</div>
                     <div class="names">
                         <div class="name">Luísa</div>
@@ -36,7 +79,7 @@
 
             <li class="containerTask">
                 <div class="informationTask">
-                    <div class="priorityLevelMedia">Média</div>
+                    <div class="priority">Média</div>
                     <div class="date">12/12/2012</div>
                     <div class="names">
                         <div class="name">Alíce</div>
@@ -51,7 +94,7 @@
 
             <li class="containerTask">
                 <div class="informationTask">
-                    <div class="priorityLevelMedia">Média</div>
+                    <div class="priority">Média</div>
                     <div class="date">19/12/2012</div>
                     <div class="names">
                         <div class="name">Fernanda</div>
@@ -65,7 +108,7 @@
 
             <li class="containerTask">
                 <div class="informationTask">
-                    <div class="priorityLevelBaixa">Baixa</div>
+                    <div class="priority">Baixa</div>
                     <div class="date">12/12/2012</div>
                     <div class="names">
                         <div class="name">Luísa</div>
@@ -79,7 +122,7 @@
 
             <li class="containerTask">
                 <div class="informationTask">
-                    <div class="priorityLevelBaixa">Baixa</div>
+                    <div class="priority">Baixa</div>
                     <div class="date">10/12/2012</div>
                     <div class="names">
                         <div class="name">Fernanda</div>
