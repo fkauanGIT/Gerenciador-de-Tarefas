@@ -38,9 +38,12 @@ export const arrangeAccordingToOrder = () => {
         const dateA = a.querySelector(".date").textContent.trim();
         const dateB = b.querySelector(".date").textContent.trim();
 
-        // Comparar datas, melhor fazer a conversão para formato de data
-        const dateAParsed = new Date(dateA.split('/').reverse().join('-'));
-        const dateBParsed = new Date(dateB.split('/').reverse().join('-'));
+        // Reformatando as datas para o formato 'YYYY-MM-DD'
+        const [dayA, monthA, yearA] = dateA.split('/');
+        const [dayB, monthB, yearB] = dateB.split('/');
+        
+        const dateAParsed = new Date(`${yearA}-${monthA}-${dayA}`);
+        const dateBParsed = new Date(`${yearB}-${monthB}-${dayB}`);
 
         return dateAParsed - dateBParsed; // Ordem crescente das datas
     });
@@ -49,17 +52,37 @@ export const arrangeAccordingToOrder = () => {
     taskArray.forEach(task => taskList.appendChild(task));
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Chama as funções assim que o DOM estiver pronto
+export const createFormAdd = () => {
+    const taskList = document.querySelector(".contents");
+    const title_form = document.getElementById("title_form").value;
+    const priority = document.getElementById("priority").value;
+    const date = document.getElementById("date").value;
+    const description = document.getElementById("description").value;
 
-    // Obtém todas as tarefas (containerTask)
-    const tasks = document.querySelectorAll('.div_containerTask');
-
-    // Aplica a cor a cada tarefa
-    tasks.forEach(task => {
-        setPriorityColor(task);  // Passa cada task individualmente
+    const responsabilitys = [];
+    const checkboxes = document.querySelectorAll("input[name='responsability']:checked");
+    checkboxes.forEach(checkbox => {
+        responsabilitys.push(checkbox.value);
     });
 
-    // Organiza as tarefas por prioridade e data
-    arrangeAccordingToOrder();
-});
+    const Task = document.createElement("li");
+    Task.classList.add("containerTask");
+
+    Task.innerHTML = `
+    <div class="div_containerTask">
+        <div class="informationTask">
+            <div class="priority priority-${priority.toLowerCase()}">${priority}</div>
+            <div class="date">${date}</div>
+            <ul class="responsabilitys">
+                    ${responsabilitys.map(responsible => `<li class="name">${responsible}</li>`).join('')}
+            </ul>
+        </div>
+        <div class="nameDescriptionTask">
+            <h2 class="title">${title_form}</h2>
+            <p class="description">${description}</p>
+        </div>
+    </div>
+    `;
+    
+    taskList.appendChild(Task);
+};

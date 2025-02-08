@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -20,72 +20,73 @@
             <div class="container_form_1">
                 <div class="title_form">
                     <label for="title_form">Título</label>
-                    <input type="text" id="title_form" name="title_form" placeholder="Ex: revisar código crítico">
+                    <input type="text" id="title_form" name="title_form" placeholder="Ex: revisar código crítico" required>
                 </div>
                 <div class="contentContainer1">
                     <div class="priority">
                         <label for="priority">Prioridade</label>
                         <select name="priority" id="priority">
                             <option value="Alta">Alta</option>
-                            <option value="Media">Média</option>
+                            <option value="Média">Média</option>
                             <option value="Baixa">Baixa</option>
                         </select>
                     </div>
-
+        
                     <div class="date__form">
                         <label for="date">Data</label>
-                        <input type="datetime" id="date" name="date" placeholder="12/12/2012">
+                        <input type="datetime" id="date" name="date" placeholder="12/12/2012" required>
                     </div>
                 </div>
             </div>
-
+        
             <div class="container_form_2">
                 <div class="description">
                     <label for="description">Descrição</label>
-                    <input type="text" id="description" name="description"
-                        placeholder="Revisar bugs críticos no módulo principal. ">
+                    <input type="text" id="description" name="description" placeholder="Revisar bugs críticos no módulo principal." required>
                 </div>
                 <div class="responsabilitys">
-                    <label for="responsabilitys">Responsáveis</label>
+                    <p>Responsáveis</p>
                     <div class="responsabilitysCheckbox">
                         <div>
                             <input type="checkbox" id="alice" name="responsability" value="Alice">
                             <label for="alice">Alice</label>
                         </div>
-
+                
                         <div>
                             <input type="checkbox" id="carlos" name="responsability" value="Carlos">
                             <label for="carlos">Carlos</label>
                         </div>
-
+                
                         <div>
                             <input type="checkbox" id="fabiano" name="responsability" value="Fabiano">
                             <label for="fabiano">Fabiano</label>
                         </div>
-
+                
                         <div>
                             <input type="checkbox" id="luisa" name="responsability" value="Luísa">
                             <label for="luisa">Luísa</label>
                         </div>
-
+                
                         <div>
                             <input type="checkbox" id="fabiana" name="responsability" value="Fabiana">
                             <label for="fabiana">Fabiana</label>
                         </div>
-
+                
                         <div>
                             <input type="checkbox" id="marcos" name="responsability" value="Marcos">
                             <label for="marcos">Marcos</label>
                         </div>
                     </div>
                 </div>
+                
             </div>
-
+        
             <div class="container_form_3">
-                <button type="reset" class="button__clear">Limpar</button>
-                <button type="submit" class="button__add">Adicionar</button>
+                <button type="reset" class="button__clear" id="button__clear">Limpar</button>
+                <button type="submit" class="button__add" id="button__add">Adicionar</button>
             </div>
         </form>
+        
 
 
         <h1>Tarefas</h1>
@@ -95,11 +96,12 @@
             <li class="containerTask">
                 <div class="div_containerTask">
                     <div class="informationTask">
-                        <div class="priority">Alta</div>
+                        <div class="priority priority-alta">Alta</div>
                         <div class="date">12/12/2012</div>
-
-                        <div class="name">Luísa</div>
-                        <div class="name">Fabiano</div>
+                        <ul class="responsabilitys">
+                            <li class="name">Luísa</li>
+                            <li class="name">Fabiano</li>
+                        </ul>
                     </div>
                     <div class="nameDescriptionTask">
                         <h2 class="title">Revisar código crítico</h2>
@@ -111,7 +113,7 @@
             <li class="containerTask">
                 <div class="div_containerTask">
                     <div class="informationTask">
-                        <div class="priority">Média</div>
+                        <div class="priority priority-media">Média</div>
                         <div class="date">12/12/2012</div>
                         <div class="name">Alíce</div>
                         <div class="name">Carlos</div>
@@ -126,7 +128,7 @@
             <li class="containerTask">
                 <div class="div_containerTask">
                     <div class="informationTask">
-                        <div class="priority">Média</div>
+                        <div class="priority priority-media">Média</div>
                         <div class="date">19/12/2012</div>
 
                         <div class="name">Fernanda</div>
@@ -142,7 +144,7 @@
             <li class="containerTask">
                 <div class="div_containerTask">
                     <div class="informationTask">
-                        <div class="priority">Baixa</div>
+                        <div class="priority priority-baixa">Baixa</div>
                         <div class="date">12/12/2012</div>
 
                         <div class="name">Luísa</div>
@@ -158,7 +160,7 @@
             <li class="containerTask">
                 <div class="div_containerTask">
                     <div class="informationTask">
-                        <div class="priority">Baixa</div>
+                        <div class="priority priority-baixa">Baixa</div>
                         <div class="date">10/12/2012</div>
 
                         <div class="name">Fernanda</div>
@@ -173,7 +175,7 @@
         </ul>
     </main>
 
-    <script src="js/constantes.js"  type="módulo" defer></script>
+    <script type="module" src="js/app.js" defer></script>
 
 </body>
 

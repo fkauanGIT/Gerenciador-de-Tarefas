@@ -1,9 +1,14 @@
-import { setPriorityColor } from "./constantes";
-import { arrangeAccordingToOrder } from "./constantes";
+import { setPriorityColor, arrangeAccordingToOrder, createFormAdd } from './constantes.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Chama as funções assim que o DOM estiver pronto
-    setPriorityColor(tasks)
-    arrangeAccordingToOrder();
-});
+    document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();  
 
+        createFormAdd(); 
+
+        document.querySelectorAll(".containerTask").forEach(setPriorityColor);
+        arrangeAccordingToOrder(); 
+
+        e.target.reset(); 
+    });
+});

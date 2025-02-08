@@ -4,7 +4,7 @@
   "description": "![Visualição do projeto](assets/Captura%20de%20tela%202025-02-01%20152323.png)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch js/app.js",
     "sass": "sass --watch sass/app.scss:css/styles.css"
   },
   "repository": {
