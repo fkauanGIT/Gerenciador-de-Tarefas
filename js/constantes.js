@@ -60,6 +60,9 @@ export const arrangeAccordingToOrder = () => {
                 <p class="description">${task.description}</p>
             </div>
         </div>
+        <div class"trash">
+            
+        </div>
         `;
 
         taskList.appendChild(Task);
