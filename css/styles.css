@@ -133,6 +133,7 @@ main {
 .contents .containerTask .div_containerTask .informationTask .responsabilitys {
   display: flex;
   gap: 8px;
+  padding-left: 0;
 }
 .contents .containerTask .div_containerTask .informationTask .priority {
   color: white;
@@ -166,6 +167,21 @@ main {
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
+}
+.contents .containerTask .trash {
+  display: flex;
+  gap: 1rem;
+}
+.contents .containerTask .trash .bi-trash3, .contents .containerTask .trash .bi-check-circle-fill {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.contents .containerTask .trash .bi-trash3:hover {
+  fill: red;
+  transform: scale(1.2);
+}
+.contents .containerTask .trash .bi-check-circle-fill:hover {
+  fill: rgb(81, 131, 98);
+  transform: scale(1.2);
 }
 
 /* Estilos para o formulário principal */
@@ -265,4 +281,5 @@ form {
   color: #fff;
   transform: scale(1.1);
 }
+
 /*# sourceMappingURL=styles.css.map */

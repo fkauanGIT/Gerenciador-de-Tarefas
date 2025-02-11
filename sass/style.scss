@@ -64,6 +64,7 @@ main {
                 .responsabilitys{
                     display: flex;
                     gap: 8px;
+                    padding-left: 0;
                 }
     
                 .priority {
@@ -105,6 +106,25 @@ main {
                     line-height: 26px;
                     font-weight: 400;
                 };
+            }
+        }
+
+        .trash {
+            display: flex;
+            gap: 1rem;
+        
+            .bi-trash3, .bi-check-circle-fill {
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+        
+            .bi-trash3:hover {
+                fill: red; 
+                transform: scale(1.2);
+            }
+        
+            .bi-check-circle-fill:hover {
+                fill: rgb(81, 131, 98); 
+                transform: scale(1.2);
             }
         }
     }
