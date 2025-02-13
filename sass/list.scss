@@ -1,5 +1,5 @@
 // Lista
-.contents {
+.tasks-list {
     width: 100%;
     min-height: 686px;
     display: flex;
@@ -8,7 +8,7 @@
     list-style: none;
 
     // Tarefa
-    .containerTask{
+    .task{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -19,20 +19,20 @@
         box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.5);
 
         //Conteúdo da lista
-        .div_containerTask{
+        .task-item {
             gap: 8px;
             display: flex;
             flex-direction: column;
             width: 100%;
 
-            .informationTask {
+            .task-item__information {
                 display: flex;
                 gap: 8px;
                 font-size: 12px;
                 font-weight: 600;
                 align-items: center;
     
-                .date, .name {
+                .task-item__date, .task-item__responsible-name {
                     padding: 4px 8px;
                     border-radius: 4px;
                     display: flex;
@@ -44,13 +44,13 @@
                     color: #b6b6b6;
                 };
 
-                .responsabilitys{
+                .task-item__responsibles {
                     display: flex;
                     gap: 8px;
                     padding-left: 0;
                 }
     
-                .priority {
+                .task-item__priority {
                     color: white;
                     font-weight: 600;
                     padding: 4px 8px;
@@ -61,22 +61,22 @@
                     font-size: 12px;
                 };
 
-                .priority-alta, .priority-baixa{
+                .task-item__priority--Alta, .task-item__priority--Baixa{
                     padding: 4px 12px
                 }
 
-                .priority-media{
+                .task-item__priority--Media{
                     padding: 4px 8px
                 }
             };
     
             // Descrição Lista
-            .nameDescriptionTask {
+            .task-item__description {
                 display: flex;
                 gap: 10px;
                 align-items: center;
     
-                .title {
+                .task-item__title {
                     font-size: 20px;
                     font-weight: 700;
                     line-height: 30px;
@@ -84,7 +84,7 @@
                     padding-right: 16px;
                 };
                 
-                .description {
+                .task-item__text-description {
                     font-size: 16px;
                     line-height: 26px;
                     font-weight: 400;
@@ -93,7 +93,7 @@
         }
 
         //Ícones da lista remover e checkbox
-        .trash {
+        .task-item__actions {
             display: flex;
             gap: 1rem;
         

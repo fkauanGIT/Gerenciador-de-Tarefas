@@ -9,7 +9,7 @@ form {
     gap: 16px;
 
     //Titulo, prioridade, data
-    .container_form_1 {
+    .task-form__section--title {
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -27,16 +27,16 @@ form {
 
         ;
 
-        .title_form,
-        .priority,
-        .date__form {
+        .task-form__field,
+        .task-form__priority,
+        .task-form__date {
             display: flex;
             flex-direction: column;
             width: 100%;
             gap: 4px;
         }
 
-        .contentContainer1 {
+        .task-form__field-group {
             display: flex;
             gap: 24px;
             width: 100%;
@@ -44,7 +44,7 @@ form {
     }
 
     // Descrição, Responsáveis
-    .container_form_2 {
+    .task-form__section--description {
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -58,18 +58,18 @@ form {
             padding: 12px 12px 24px;
         }
 
-        .description {
+        .task-form__field {
             display: flex;
             flex-direction: column;
             width: 100%;
             gap: 4px;
         }
 
-        .responsabilitys {
+        .task-form__responsibles {
             width: 100%;
             gap: 4px;
 
-            .responsabilitysCheckbox {
+            .task-form__responsibles-checkbox-group {
                 width: 80%;
                 height: 56px;
                 gap: 16px;
@@ -80,7 +80,7 @@ form {
     }
 
     //Botões de Limpar e Adicionar
-    .container_form_3 {
+    .task-form__actions {
         display: flex;
         width: 100%;
         padding: 24px 90px 24px 90px;

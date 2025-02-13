@@ -10,29 +10,29 @@
     height: 90vh;
     justify-content: space-between;
   }
-  .container_form_1 {
+  .task-form__section--title {
     flex-direction: column;
     height: auto;
     gap: 16px;
   }
-  .contentContainer1 {
+  .task-form__field-group {
     flex-direction: column;
     gap: 16px;
   }
-  .container_form_2 {
+  .task-form__section--description {
     flex-direction: column;
     gap: 16px;
     height: auto;
   }
-  .description input {
+  .task-form__field input {
     width: 100%;
   }
-  .responsabilitysCheckbox {
+  .task-form__responsibles-checkbox-group {
     width: 100%;
     gap: 8px;
     flex-wrap: wrap;
   }
-  .container_form_3 {
+  .task-form__actions {
     justify-content: center;
     gap: 16px;
     padding: 20px;
@@ -45,19 +45,19 @@
   form {
     padding: 16px;
   }
-  .container_form_1, .container_form_2 {
+  .task-form__section--title, .task-form__section--description {
     flex-direction: column;
     gap: 12px;
   }
-  .description input {
+  .task-form__field input {
     width: 100%;
     height: auto;
     padding: 12px;
   }
-  .responsabilitysCheckbox {
+  .task-form__responsibles-checkbox-group {
     width: 100%;
   }
-  .container_form_3 {
+  .task-form__actions {
     padding: 16px;
     gap: 12px;
   }
@@ -66,11 +66,11 @@
   }
 }
 @media (max-width: 768px) {
-  .containerTask {
+  .task {
     height: auto;
   }
 }
-.contents {
+.tasks-list {
   width: 100%;
   min-height: 686px;
   display: flex;
@@ -78,7 +78,7 @@
   gap: 24px;
   list-style: none;
 }
-.contents .containerTask {
+.tasks-list .task {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -88,20 +88,20 @@
   padding: 16px;
   box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.5);
 }
-.contents .containerTask .div_containerTask {
+.tasks-list .task .task-item {
   gap: 8px;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.contents .containerTask .div_containerTask .informationTask {
+.tasks-list .task .task-item .task-item__information {
   display: flex;
   gap: 8px;
   font-size: 12px;
   font-weight: 600;
   align-items: center;
 }
-.contents .containerTask .div_containerTask .informationTask .date, .contents .containerTask .div_containerTask .informationTask .name {
+.tasks-list .task .task-item .task-item__information .task-item__date, .tasks-list .task .task-item .task-item__information .task-item__responsible-name {
   padding: 4px 8px;
   border-radius: 4px;
   display: flex;
@@ -111,12 +111,12 @@
   border: 1px solid #b6b6b6;
   color: #b6b6b6;
 }
-.contents .containerTask .div_containerTask .informationTask .responsabilitys {
+.tasks-list .task .task-item .task-item__information .task-item__responsibles {
   display: flex;
   gap: 8px;
   padding-left: 0;
 }
-.contents .containerTask .div_containerTask .informationTask .priority {
+.tasks-list .task .task-item .task-item__information .task-item__priority {
   color: white;
   font-weight: 600;
   padding: 4px 8px;
@@ -126,41 +126,41 @@
   gap: 10px;
   font-size: 12px;
 }
-.contents .containerTask .div_containerTask .informationTask .priority-alta, .contents .containerTask .div_containerTask .informationTask .priority-baixa {
+.tasks-list .task .task-item .task-item__information .task-item__priority--Alta, .tasks-list .task .task-item .task-item__information .task-item__priority--Baixa {
   padding: 4px 12px;
 }
-.contents .containerTask .div_containerTask .informationTask .priority-media {
+.tasks-list .task .task-item .task-item__information .task-item__priority--Media {
   padding: 4px 8px;
 }
-.contents .containerTask .div_containerTask .nameDescriptionTask {
+.tasks-list .task .task-item .task-item__description {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.contents .containerTask .div_containerTask .nameDescriptionTask .title {
+.tasks-list .task .task-item .task-item__description .task-item__title {
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
   border-right: 1px solid #b6b6b6;
   padding-right: 16px;
 }
-.contents .containerTask .div_containerTask .nameDescriptionTask .description {
+.tasks-list .task .task-item .task-item__description .task-item__text-description {
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
 }
-.contents .containerTask .trash {
+.tasks-list .task .task-item__actions {
   display: flex;
   gap: 1rem;
 }
-.contents .containerTask .trash .bi-trash3, .contents .containerTask .trash .bi-check-circle-fill {
+.tasks-list .task .task-item__actions .bi-trash3, .tasks-list .task .task-item__actions .bi-check-circle-fill {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.contents .containerTask .trash .bi-trash3:hover {
+.tasks-list .task .task-item__actions .bi-trash3:hover {
   fill: red;
   transform: scale(1.2);
 }
-.contents .containerTask .trash .bi-check-circle-fill:hover {
+.tasks-list .task .task-item__actions .bi-check-circle-fill:hover {
   fill: rgb(81, 131, 98);
   transform: scale(1.2);
 }
@@ -174,65 +174,65 @@ form {
   flex-direction: column;
   gap: 16px;
 }
-form .container_form_1 {
+form .task-form__section--title {
   display: flex;
   width: 100%;
   justify-content: space-between;
   gap: 24px;
   height: 64px;
 }
-form .container_form_1 input[type=text],
-form .container_form_1 input[type=datetime],
-form .container_form_1 select {
+form .task-form__section--title input[type=text],
+form .task-form__section--title input[type=datetime],
+form .task-form__section--title select {
   height: 100%;
   border-radius: 8px;
   padding: 12px 12px;
   border: 1px solid #4A4A4A;
 }
-form .container_form_1 .title_form,
-form .container_form_1 .priority,
-form .container_form_1 .date__form {
+form .task-form__section--title .task-form__field,
+form .task-form__section--title .task-form__priority,
+form .task-form__section--title .task-form__date {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 4px;
 }
-form .container_form_1 .contentContainer1 {
+form .task-form__section--title .task-form__field-group {
   display: flex;
   gap: 24px;
   width: 100%;
 }
-form .container_form_2 {
+form .task-form__section--description {
   display: flex;
   width: 100%;
   justify-content: space-between;
   gap: 24px;
   height: 107.5px;
 }
-form .container_form_2 input[type=text] {
+form .task-form__section--description input[type=text] {
   height: 107.5px;
   border: 1px solid #4A4A4A;
   border-radius: 8px;
   padding: 12px 12px 24px;
 }
-form .container_form_2 .description {
+form .task-form__section--description .task-form__field {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 4px;
 }
-form .container_form_2 .responsabilitys {
+form .task-form__section--description .task-form__responsibles {
   width: 100%;
   gap: 4px;
 }
-form .container_form_2 .responsabilitys .responsabilitysCheckbox {
+form .task-form__section--description .task-form__responsibles .task-form__responsibles-checkbox-group {
   width: 80%;
   height: 56px;
   gap: 16px;
   display: flex;
   flex-wrap: wrap;
 }
-form .container_form_3 {
+form .task-form__actions {
   display: flex;
   width: 100%;
   padding: 24px 90px 24px 90px;
@@ -240,25 +240,25 @@ form .container_form_3 {
   gap: 24px;
   height: 107.5px;
 }
-form .container_form_3 button[type=reset],
-form .container_form_3 button[type=submit] {
+form .task-form__actions button[type=reset],
+form .task-form__actions button[type=submit] {
   width: 169px;
   height: 33px;
   border: 1px solid #4A4A4A;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
-form .container_form_3 button[type=reset] {
+form .task-form__actions button[type=reset] {
   background-color: #fff;
 }
-form .container_form_3 button[type=submit] {
+form .task-form__actions button[type=submit] {
   background-color: #4A4A4A;
   color: #fff;
 }
-form .container_form_3 button[type=reset]:hover {
+form .task-form__actions button[type=reset]:hover {
   transform: scale(1.1);
 }
-form .container_form_3 button[type=submit]:hover {
+form .task-form__actions button[type=submit]:hover {
   background-color: #4A4A4A;
   color: #fff;
   transform: scale(1.1);
